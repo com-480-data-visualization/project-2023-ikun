@@ -2,7 +2,7 @@
 
 | Student's name | SCIPER |
 | -------------- | ------ |
-| | |
+| Zhaobo Wang| |
 | | |
 | | |
 
@@ -47,10 +47,13 @@ Our data visualization can provide valuable insights into this unprecedented glo
 > - Think of an overview for the project, your motivation, and the target audience.
  -->
 ### Exploratory Data Analysis
+- COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University
+  - headers
+  
 
-> Pre-processing of the data set you chose
+<!-- > Pre-processing of the data set you chose
 > - Show some basic statistics and get insights about the data
-
+ -->
 ### Related work
 
 
@@ -73,4 +76,3 @@ Our data visualization can provide valuable insights into this unprecedented glo
 
 - < 24h: 80% of the grade for the milestone
 - < 48h: 70% of the grade for the milestone
-
