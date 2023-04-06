@@ -52,6 +52,10 @@ Our data visualization can provide valuable insights into this unprecedented glo
 
     | Country/Region | Province/State | County | FIPS | Date | Case_Type | Cases | Long | Lat | SO3166-1 | ISO3166-2 | Difference | Last_Update_Date | Last_Reported_Flag |
     | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+    |Afghanistan|	NaN|	NaN|	NaN|	2020-01-22 00:00:00.000000|	Confirmed|	0|	65.0|	33.0|	AF|	NaN|	NaN|	2023-03-23 15:02:04.173620|	False|
+    |Afghanistan|	NaN|	NaN|	NaN|	2020-02-24 00:00:00.000000|	Confirmed|	1|	65.0|	33.0|	AF|	NaN|	1.0|	2023-03-23 15:02:04.173620|	False|
+
+    There are 14 variables in total with 8 categorical, 5 numerical, and 1 boolean.
 
 
 
