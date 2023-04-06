@@ -50,6 +50,8 @@ Our data visualization can provide valuable insights into this unprecedented glo
 - COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University
   - headers
 | Country/Region | Province/State | County | FIPS | Date | Case_Type | Cases | Long | Lat | SO3166-1 | ISO3166-2 | Difference | Last_Update_Date | Last_Reported_Flag |
+| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- |
+
 
 
 
