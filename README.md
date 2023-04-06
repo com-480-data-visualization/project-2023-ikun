@@ -71,7 +71,7 @@ Our data visualization can provide valuable insights into this unprecedented glo
   - headers
 
     |country_region|	PROVINCE_STATE|	ISO_3166_1|	ISO_3166_2|	date| grocery_and_pharmacy_change_perc|	parks_change_perc|	residential_change_perc|	retail_and_recreation_change_perc|	transit_stations_change_perc|	workplaces_change_perc|	Last_Update_Date|	Last_Reported_Flag|	sub_region_2|
-    |--|	--|	--|	I--|	--| --|	--|	--|	--|	--|	--|	--|	--|	--|
+    |--|	--|	--|	--|	--| --|	--|	--|	--|	--|	--|	--|	--|	--|
     |United Arab Emirates|	NaN|	AE|	NaN|	2020-02-15 00:00:00.000000|	4.0|	5.0|	1.0|	0.0|	0.0|	2.0|	2023-04-06 00:04:15.361988|	False|	NaN|
     |United Arab Emirates|	NaN|	AE|	NaN|	2020-02-16 00:00:00.000000|	4.0|	4.0|	1.0|	1.0|	1.0|	2.0|	2023-04-06 00:04:15.361988|	False|	NaN|
 
