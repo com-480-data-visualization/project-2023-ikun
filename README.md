@@ -66,7 +66,24 @@ Our data visualization can provide valuable insights into this unprecedented glo
     Long and Lat are geolocation of each places, which can be used in map visualizations.
 
     The rest three variables is related with the Covid case, so it is not our concern.
-     
+
+- Google Global Community Mobility Reports
+  - headers
+
+    |country_region|	PROVINCE_STATE|	ISO_3166_1|	ISO_3166_2|	date| grocery_and_pharmacy_change_perc|	parks_change_perc|	residential_change_perc|	retail_and_recreation_change_perc|	transit_stations_change_perc|	workplaces_change_perc|	Last_Update_Date|	Last_Reported_Flag|	sub_region_2|
+    |--|	--|	--|	I--|	--| --|	--|	--|	--|	--|	--|	--|	--|	--|
+    |United Arab Emirates|	NaN|	AE|	NaN|	2020-02-15 00:00:00.000000|	4.0|	5.0|	1.0|	0.0|	0.0|	2.0|	2023-04-06 00:04:15.361988|	False|	NaN|
+    |United Arab Emirates|	NaN|	AE|	NaN|	2020-02-16 00:00:00.000000|	4.0|	4.0|	1.0|	1.0|	1.0|	2.0|	2023-04-06 00:04:15.361988|	False|	NaN|
+
+  - There are 14 variables in total with 7 categorical, 6 numerical, and 1 boolean.
+
+    country_region / PROVINCE_STATE /	ISO_3166_1 /	ISO_3166_2 are same as the casa dataset, which is the location information.
+
+    date is range from 2020-02-15 to 2022-10-15.
+
+    The rest is the percentage representing the change of population mobility.
+
+- Therefore, as we want to draw a comprehensive global visualization, it is necessary for us to aggregates the U.S. data of the case dataset. Moreover, the time range of two dataset is also unmatched, and we need to truncate them into same range for further analysis.
 
 
 
