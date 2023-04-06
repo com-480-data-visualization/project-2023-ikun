@@ -55,7 +55,20 @@ Our data visualization can provide valuable insights into this unprecedented glo
     |Afghanistan|	NaN|	NaN|	NaN|	2020-01-22 00:00:00.000000|	Confirmed|	0|	65.0|	33.0|	AF|	NaN|	NaN|	2023-03-23 15:02:04.173620|	False|
     |Afghanistan|	NaN|	NaN|	NaN|	2020-02-24 00:00:00.000000|	Confirmed|	1|	65.0|	33.0|	AF|	NaN|	1.0|	2023-03-23 15:02:04.173620|	False|
 
-    There are 14 variables in total with 8 categorical, 5 numerical, and 1 boolean.
+  - There are 14 variables in total with 8 categorical, 5 numerical, and 1 boolean.
+
+    Country / Province / County / FIPS / SO3166-1 / ISO3166-2 are variables for location, and, as the dataset focus more on the U.S. area, most of them are missing for other countires.
+
+    Date is range from 2020-01-22 to 2023-03-08.
+
+    Case_type is categorical data in ['Confirmed', 'Deaths', 'Recovered', 'Active'] and Cases is the number of it.
+
+    Long and Lat are geolocation of each places, which can be used in map visualizations.
+
+    The rest three variables is related with the Covid case, so it is not our concern.
+     
+
+
 
 
 
