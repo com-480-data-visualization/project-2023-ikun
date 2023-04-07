@@ -105,7 +105,7 @@ Our data visualization can provide valuable insights into this unprecedented glo
 - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
   - During the COVID-19 pandemic, Chinese university students faced various challenges. First, due to the suspension of in-person classes, many students had to adapt to online learning, which could impact the quality of education and academic experience. Second, travel restrictions and visa processing delays caused uncertainty and difficulties for Chinese students to leave China and study in other countries. Third, during the holidays, many Chinese students abroad encountered difficulties in arranging travel plans due to limited flights, dealing with complicated travel restrictions and quarantine measures, and concerns about the risk of contracting and spreading COVID-19 to their family members.
   - Our inspiration comes from these challenges faced by Chinese students during the pandemic. We want to do meaningful visualization work, such as providing reference and suggestions for future epidemic outbreaks, which can address the difficulties faced by Chinese students in various aspects, like returning home, studying abroad.
-> - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
+
 
 ## Milestone 2 (5th May, 5pm)
 
