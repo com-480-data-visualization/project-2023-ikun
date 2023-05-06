@@ -1,0 +1,32 @@
+:root {
+	--header-color: #1576ed;
+
+}
+
+p {
+	text-align: justify;
+}
+
+.title {
+	width: 100%;
+
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	background-color: var(--header-color);
+
+  background-size: cover;
+  background-position: 40%;
+	/* Center */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title h1 {
+	font-size: 4rem;
+	color: white;
+	font-variant: small-caps;
+
+	text-shadow: black 0 0 0.6rem;
+}
