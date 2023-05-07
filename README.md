@@ -113,7 +113,9 @@ Link to the report:
 
 https://github.com/com-480-data-visualization/project-2023-ikun/blob/master/Data%20Visualization%20-%20Milestone%202.pdf
 
+
 Link to website demo：
+
 https://com-480-data-visualization.github.io/project-2023-ikun/
 
 **10% of the final grade**
