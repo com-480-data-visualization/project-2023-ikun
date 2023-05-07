@@ -107,13 +107,13 @@ Our data visualization can provide valuable insights into this unprecedented glo
   - Our inspiration comes from these challenges faced by Chinese students during the pandemic. We want to do meaningful visualization work, such as providing reference and suggestions for future epidemic outbreaks, which can address the difficulties faced by Chinese students in various aspects, like returning home, studying abroad.
 
 
-## Milestone 2 (5th May, 5pm)
+## Milestone 2 (7th May, 5pm)
 
 Link to report: https://github.com/com-480-data-visualization/project-2023-ikun/blob/master/Data%20Visualization%20-%20Milestone%202.pdf
 
 **10% of the final grade**
 
-## Milestone 3 (2nd June, 5pm)
+## Milestone 3 (4nd June, 5pm)
 
 **80% of the final grade**
 
