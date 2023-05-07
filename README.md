@@ -109,8 +109,9 @@ Our data visualization can provide valuable insights into this unprecedented glo
 
 ## Milestone 2 (5th May, 5pm)
 
-**10% of the final grade**
+Link to report: https://github.com/com-480-data-visualization/project-2023-ikun/blob/master/Data%20Visualization%20-%20Milestone%202.pdf
 
+**10% of the final grade**
 
 ## Milestone 3 (2nd June, 5pm)
 
