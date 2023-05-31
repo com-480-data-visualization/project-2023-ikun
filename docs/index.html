@@ -1,18 +1,70 @@
-<script src="scripts/d3.js"></script>
+<!DOCTYPE html>
+<html>
 
-<div id="visualization">
-    <script>
-        // Select the SVG container
-        var svgContainer = d3.select("#visualization")
-            .append("svg")
-            .attr("width", 400)
-            .attr("height", 400);
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Mobility & Covid-19</title>
 
-        // Create a circle
-        svgContainer.append("circle")
-            .attr("cx", 200)
-            .attr("cy", 200)
-            .attr("r", 100)
-            .style("fill", "steelblue");
-    </script>
-</div>
+    <!-- Google fonts -->
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css'>
+
+</head>
+
+<body>
+
+    <!-- Chart 2: Radar chart for selected countries on a given date -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <span class="navbar-brand">Radar Chart</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-9">
+                <button id="play-button" class="btn btn-primary">Play</button>
+                <button id="reset-button" class="btn btn-default">Reset</button>
+                <div id="slider-wrapper">
+                    <div id="date-slider"></div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <select id="continent-select" class="form-control">
+                    <option selected value="all">All</option>
+                    <option value="europe">Europe</option>
+                    <option value="asia">Asia</option>
+                    <option value="americas">Americas</option>
+                    <option value="africa">Africa</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="chart-area"></div>
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="./scripts/radarChart.js"></script>
+
+    <!-- <script src='https://d3js.org/d3.v5.js'></script> -->
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js'></script>
+    <script  src="./scripts/mobility_country_place_date_data.js"></script>
+    <script  src="./scripts/slider.js"></script>
+    
+
+    <div class="radarChart"></div>
+
+
+</body>
+
+</html>

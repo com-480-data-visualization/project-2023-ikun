@@ -1,69 +1,24 @@
-:root {
-	--header-color: #1576ed;
-
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  fill: #242424;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+  cursor: default;
 }
 
-p {
-	text-align: justify;
+.legend {
+  font-family: 'Raleway', sans-serif;
+  fill: #333333;
 }
 
-.title {
-	width: 100%;
-
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-
-	background-color: var(--header-color);
-
-  background-size: cover;
-  background-position: 40%;
-	/* Center */
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.tooltip {
+  fill: #333333;
 }
 
-.title h1 {
-	font-size: 4rem;
-	color: white;
-	font-variant: small-caps;
-
-	text-shadow: black 0 0 0.6rem;
-}
-
-/* side bar */
-.sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 100px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/*content*/
-.content {
-  margin-left: 100px;
-
-}
-img {
-  width: 100%;
-  height: auto;
+#slider-wrapper {
+  display: inline-block;
+  width: 50%;
+  margin: -3px 10px;
 }
