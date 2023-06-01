@@ -1,135 +1,358 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="webthemez">
     <title>Mobility & Covid-19</title>
-
-    <!-- Google fonts -->
-    <link rel="stylesheet" type="text/css" href="./styles/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css'>
-
+    <!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- <link rel="shortcut icon" href="images/ico/favicon.ico"> -->
 </head>
 
-<body>
-    <!-- Chart 1: World map bubble chart-->
-    <div>
-        <nav class="navbar navbar-default">
+<body id="home">
+    <header id="header">
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
             <div class="container">
-                <span class="navbar-brand">Map Chart</span>
-            </div>
-        </nav>
-
-        <div class="container">
-
-          <div class="row">
-              <div id="selection-1" class="col-xs-6 col-sm-3">
-                  <div id="selection-sec1" onchange="onChange(this.value)">
-                      <p>Countries</p>
-                      <v-selectpage :data="countries" :multiple="true" :max-select-limit="5"
-                          @input="handleSelectionChange" v-model="selectedItems">
-                      </v-selectpage>
-                  </div>
-              </div>
-          </div>
-
-
-          <div class="row">
-            <script src="https://d3js.org/d3.v4.js"></script>
-            <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
-
-            <!-- Load Leaflet -->
-            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
-            <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-            <!-- Load data -->
-            <script src="./scripts/mobility_country_place_date_data.js"></script>
-
-
-            <!-- Create an element where the map will take place -->
-            <div id="mapid"></div>
-
-            <style>
-            #mapid { height: 600px; }
-            </style>
-            <script src="./scripts/worldmap.js"></script>
-          </div>
-
-          <div class="row">
-              <div id="slider-1" class="col-xs-6 col-sm-9">
-                  <button id="play-button-sec1" class="btn btn-primary">Play</button>
-                  <button id="reset-button-sec1" class="btn btn-default">Reset</button>
-                  <div id="slider-wrapper-sec1">
-                      <div id="date-slider-sec1"></div>
-                  </div>
-              </div>
-          </div>
-
-        </div>
-
-
-
-
-    </div>
-
-    <!-- Chart 2: Radar chart for selected countries on a given date -->
-    <div>
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <span class="navbar-brand">Radar Chart</span>
-            </div>
-        </nav>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6 col-sm-9">
-                    <button id="play-button" class="btn btn-primary">Play</button>
-                    <button id="reset-button" class="btn btn-default">Reset</button>
-                    <div id="slider-wrapper">
-                        <div id="date-slider"></div>
-                    </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
                 </div>
-                <div class="col-xs-6 col-sm-3">
-                    <div id="selection" onchange="onChange(this.value)">
-                        <p>Countries</p>
-                        <v-selectpage :data="countries" :multiple="true" :max-select-limit="5"
-                            @input="handleSelectionChange" v-model="selectedItems">
-                        </v-selectpage>
+
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="scroll active"><a href="#home">Home</a></li>
+                        <li class="scroll"><a href="#CommunityMobility">Community Mobility</a></li>
+                        <li class="scroll"><a href="#MapView">Map View</a></li>
+                        <li class="scroll"><a href="#RadarView">Radar View</a></li>
+                        <li class="scroll"><a href="#portfolio">Bar View</a></li>
+                        <!-- <li class="scroll"><a href="#pricing">Pricing</a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <!--/.container-->
+        </nav>
+        <!--/nav-->
+    </header>
+    <!--/header-->
+
+    <section id="hero-banner">
+        <div class="banner-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <h2>Community Mobility and <b>COVID-19</b></h2>
+                        <p>Where have you been during the outbreak? <br /> </p>
+
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!--/#main-slider-->
+
+    <section id="CommunityMobility">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">What is community mobility?</h2>
+                <p class="wow fadeInDown">As global communities responded to COVID-19, Google heard from public health
+                    officials that the same type of aggregated, <br />anonymized insights they used in products such as
+                    Google
+                    Maps would be helpful as officials made critical decisions to combat COVID-19.</p>
+
+                <p class="wow fadeInDown">These Community Mobility Reports released by Google aimed to provide insights
+                    into what changed
+                    in response to policies <br /> aimed at combating COVID-19. The reports charted movement trends over
+                    time
+                    by geography, across six different categories of places.</p>
+            </div>
 
             <div class="row">
-                <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-                <script src="./scripts/radarChart.js"></script>
+                <div class="features">
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Grocery & pharmacy</h4>
+                                <p>Mobility trends for places like grocery store, farmers markets,
+                                    food shops, drug stores, and pharmacies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-md-4-->
 
-                <script src='https://unpkg.com/v-selectpage@2.1.4/dist/v-selectpage.js'></script>
-                <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-                <script src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js'></script>
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-leaf"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Parks</h4>
+                                <p>Mobility trends for places like local parks, national parks, public beaches,
+                                    dog parks, plazas, and public gardens.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-md-4-->
 
-                <script src="./scripts/mobility_country_place_date_data.js"></script>
-                <script src="./scripts/slider.js"></script>
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-train"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Transit stations</h4>
+                                <p>Mobility trends for places like public transport hubs such as subway, bus, and train
+                                    stations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-md-4-->
 
-                <div class="radarChart"></div>
-                <script>update()</script>
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-cutlery"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Retail & recreation</h4>
+                                <p>Mobility trends for places like restaurants, cafes, shopping centers, theme parks,
+                                    museums, and theaters.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-home"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Residential</h4>
+                                <p>Mobility trends for places of residence.<br /><br /><br /></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-md-4-->
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <i class="fa fa-building-o"></i>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Workplaces</h4>
+                                <p>Mobility trends for places of work.<br /><br /><br /></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.col-md-4-->
+                </div>
+            </div>
+            <!--/.row-->
+        </div>
+        <!--/.container-->
+    </section>
+    <!--/#CommunityMobility-->
+
+
+    <section id="MapView">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">Map View</h2>
+                <p class="wow fadeInDown">Let's take a look at the map to see how the mobility of people has changed
+                    <br /> in
+                    various regions of the world as the epidemic has progressed.
+                </p>
+
+                <div class="container">
+
+                  <div class="row">
+                      <div id="selection-1" class="col-xs-6 col-sm-3">
+                          <div id="selection-sec1" onchange="onChange(this.value)">
+                              <p>Countries</p>
+                              <v-selectpage :data="countries" :multiple="true" :max-select-limit="5"
+                                  @input="handleSelectionChange" v-model="selectedItems">
+                              </v-selectpage>
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="row">
+                    <script src="https://d3js.org/d3.v4.js"></script>
+                    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+                    <!-- Load Leaflet -->
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+                    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+                    <!-- Load data -->
+                    <script src="./scripts/mobility_country_place_date_data.js"></script>
+
+
+                    <!-- Create an element where the map will take place -->
+                    <div id="mapid"></div>
+
+                    <style>
+                    #mapid { height: 600px; }
+                    </style>
+                    <script src="./scripts/worldmap.js"></script>
+                  </div>
+
+                  <div class="row">
+                      <div id="slider-1" class="col-xs-6 col-sm-9">
+                          <button id="play-button-sec1" class="btn btn-primary">Play</button>
+                          <button id="reset-button-sec1" class="btn btn-default">Reset</button>
+                          <div id="slider-wrapper-sec1">
+                              <div id="date-slider-sec1"></div>
+                          </div>
+                      </div>
+                  </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!--  -->
+                <!--  -->
+                <!-- Map View Chart Here -->
+                <!--  -->
+                <!--  -->
+
             </div>
         </div>
-    </div>
+    </section>
+    <!--/#MapView-->
 
-    <!-- Chart 3: Racing bar chart -->
-    <div>
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <span class="navbar-brand">Racing bar chart</span>
+    <section id="RadarView">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">
+                    Radar View
+                </h2>
+                <p class="wow fadeInDown">Want to have a close look at the mobility of a few countries? Let's use the
+                    radar chart.
+                </p>
+                <p class="wow fadeInDown"> Check the countries from the list on the right and drag the timeline <br />
+                    to see how the mobility
+                    looks on any day between 2020-02-15 and 2022-10-15.</p>
+
+                <!-- Google fonts -->
+                <link rel="stylesheet" type="text/css" href="./styles/style.css">
+                <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+                <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+                <!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'> -->
+                <link rel='stylesheet' href='https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css'>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-8">
+                            <button id="play-button" class="btn btn-primary">Play</button>
+                            <button id="reset-button" class="btn btn-default">Reset</button>
+                            <div id="slider-wrapper">
+                                <div id="date-slider"></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-4">
+                            <div id="selection" onchange="onChange(this.value)">
+                                <p>Countries</p>
+                                <v-selectpage :data="countries" :multiple="true" :max-select-limit="5"
+                                    @input="handleSelectionChange" v-model="selectedItems">
+                                </v-selectpage>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"
+                            charset="utf-8"></script>
+                        <script src="./scripts/radarChart.js"></script>
+
+                        <script src='https://unpkg.com/v-selectpage@2.1.4/dist/v-selectpage.js'></script>
+                        <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+                        <script src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js'></script>
+
+                        <script src="./scripts/mobility_country_place_date_data.js"></script>
+                        <script src="./scripts/slider.js"></script>
+
+                        <div class="radarChart" id="radarChart"></div>
+                        <script>update()</script>
+                    </div>
+                </div>
+
             </div>
-        </nav>
-    </div>
 
 
+        </div>
+    </section>
+    <!--/#RadarView-->
 
+    <section id="BarView">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title wow fadeInDown">Bar View</h2>
+                <p class="wow fadeInDown">To do.</p>
+            </div>
+
+            <div class="row">
+
+                <!--  -->
+                <!--  -->
+                <!-- Bar View Chart Here -->
+                <!--  -->
+                <!--  -->
+
+            </div>
+        </div>
+    </section>
+    <!--/#BarView-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; Project of COM-480 Data Visualization, 2023-IKUN
+                </div>
+                <div class="col-sm-6">
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/mousescroll.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom-scripts.js"></script>
 </body>
 
 </html>
