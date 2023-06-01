@@ -19,6 +19,10 @@ body {
 
 #slider-wrapper {
   display: inline-block;
-  width: 50%;
-  margin: -3px 10px;
+  width: 70%;
+  margin-top: 40px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  /* margin: 15px 10px; */
 }

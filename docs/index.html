@@ -15,54 +15,69 @@
 </head>
 
 <body>
+    <!-- Chart 1: World map bubble chart-->
+    <div>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <span class="navbar-brand">Map Chart</span>
+            </div>
+        </nav>
+    </div>
 
     <!-- Chart 2: Radar chart for selected countries on a given date -->
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <span class="navbar-brand">Radar Chart</span>
-        </div>
-    </nav>
+    <div>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <span class="navbar-brand">Radar Chart</span>
+            </div>
+        </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-6 col-sm-9">
-                <button id="play-button" class="btn btn-primary">Play</button>
-                <button id="reset-button" class="btn btn-default">Reset</button>
-                <div id="slider-wrapper">
-                    <div id="date-slider"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-9">
+                    <button id="play-button" class="btn btn-primary">Play</button>
+                    <button id="reset-button" class="btn btn-default">Reset</button>
+                    <div id="slider-wrapper">
+                        <div id="date-slider"></div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div id="selection" onchange="onChange(this.value)">
+                        <p>Countries</p>
+                        <v-selectpage :data="countries" :multiple="true" :max-select-limit="5"
+                            @input="handleSelectionChange" v-model="selectedItems">
+                        </v-selectpage>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-sm-3">
-                <select id="continent-select" class="form-control">
-                    <option selected value="all">All</option>
-                    <option value="europe">Europe</option>
-                    <option value="asia">Asia</option>
-                    <option value="americas">Americas</option>
-                    <option value="africa">Africa</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="chart-area"></div>
-            </div>
-        </div>
-        <div class="row">
 
+            <div class="row">
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+                <script src="./scripts/radarChart.js"></script>
+
+                <script src='https://unpkg.com/v-selectpage@2.1.4/dist/v-selectpage.js'></script>
+                <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+                <script src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js'></script>
+
+                <script src="./scripts/mobility_country_place_date_data.js"></script>
+                <script src="./scripts/slider.js"></script>
+
+                <div class="radarChart"></div>
+                <script>update()</script>
+            </div>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-    <script src="./scripts/radarChart.js"></script>
+    <!-- Chart 3: Racing bar chart -->
+    <div>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <span class="navbar-brand">Racing bar chart</span>
+            </div>
+        </nav>
+    </div>
 
-    <!-- <script src='https://d3js.org/d3.v5.js'></script> -->
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-    <script src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js'></script>
-    <script  src="./scripts/mobility_country_place_date_data.js"></script>
-    <script  src="./scripts/slider.js"></script>
-    
-
-    <div class="radarChart"></div>
 
 
 </body>
