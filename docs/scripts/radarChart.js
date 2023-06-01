@@ -60,8 +60,8 @@ function RadarChart(id, data, selectedCountry, date, options) {
 
 	const yearLabel = svg
 		.append('text')
-		.attr('x', cfg.w)
-		.attr('y', cfg.h)
+		.attr('x', cfg.w * 1.27)
+		.attr('y', cfg.h * 0.1)
 		.attr('font-size', '20px')
 		.attr('font-weight', 'bold')
 		.attr('text-anchor', 'end')
