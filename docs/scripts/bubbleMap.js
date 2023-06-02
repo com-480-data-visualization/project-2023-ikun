@@ -53,8 +53,6 @@ d3.select("#selectButton")
     .attr("value", function (d) { return d.v; }) // corresponding value returned by the button
 
 
-
-
 var dateMap = datesMap[300];
 
 
@@ -84,15 +82,15 @@ for (let country of countriesMap){
 
 
 // Select the svg area and add circles:
-function BubbleMap(data, date, p){
+function BubbleMap(dataIn, dateIn, pIn){
 
   var size = d3.scaleSqrt()
     .domain([0, 6399531])  // What's in the data
     .range([2, 50]);  // Size in pixel
 
-  var valueExtent = d3.extent(data, function(d) { return d.value; })
+  var valueExtent = d3.extent(dataIn, function(d) { return d.value; })
   var opacity = d3.scaleLinear().domain(valueExtent)
-  .range(["white", color_list[p]])
+  .range(["white", color_list[pIn]])
 
   var svg = d3.select("#mapid")
     .select("svg")
@@ -100,7 +98,7 @@ function BubbleMap(data, date, p){
   svg.selectAll("*").remove();
 
   svg.selectAll("myCircles")
-    .data(data)
+    .data(dataIn)
     .join("circle")
       .attr("cx", d => map.latLngToLayerPoint([d.lat, d.long]).x)
       .attr("cy", d => map.latLngToLayerPoint([d.lat, d.long]).y)
@@ -120,12 +118,12 @@ function BubbleMap(data, date, p){
       .attr("y", 40)
       .attr('font-size', '40px')
   		.attr('font-weight', 'bold')
-      .text(date)
+      .text(dateIn)
 
 }
 
 
-function update(index, p) {
+function updateMap(index, pIn) {
   dateMap = datesMap[index]
   dataToDrawMap = [];
 
@@ -140,25 +138,25 @@ function update(index, p) {
         cases: case_data[country][dateMap][0],
         lat: case_data[country][dateMap][2],
         long: case_data[country][dateMap][1],
-        value: data[country][placesMap[p]][dateMap] + 1
+        value: data[country][placesMap[pIn]][dateMap] + 1
       }
     )
   }
 
-  BubbleMap(dataToDrawMap, dateMap, p)
+  BubbleMap(dataToDrawMap, dateMap, pIn)
 }
 
 
 let date_index = 300;
 let place_index = 0;
-update(date_index, place_index)
+updateMap(date_index, place_index)
 
 d3.select("#mySlider").on("input", function(d){
   date_index = this.value
-  update(date_index, place_index)
+  updateMap(date_index, place_index)
 })
 
 d3.select("#selectButton").on("change", function(d){
     place_index = this.value
-    update(date_index, place_index)
+    updateMap(date_index, place_index)
   })
