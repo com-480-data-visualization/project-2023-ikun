@@ -5,6 +5,12 @@
 <link href="css/animate.min.css" rel="stylesheet">
 <link href="css/prettyPhoto.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./styles/style.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'> -->
+<link rel='stylesheet' href='https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css'>
+
 
 <!-- Load d3.js and the geo projection plugin -->
 <section id="MapView">
@@ -25,6 +31,7 @@
               <div class="row">
 
                 <script src="https://d3js.org/d3.v6.js"></script>
+                <script src="./scripts/d3v3.js"></script>
 
                 <!-- Load Leaflet -->
                 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
@@ -41,24 +48,21 @@
 
 
                 <!-- Create an element where the map will take place -->
+                <select id="selectButton"></select>
                 <div id="mapid"></div>
 
                 <style>
                 #mapid { height: 600px; }
                 </style>
+                <svg id="date_text" height="50px"></svg>
 
+                <input type="range" name="mySlider" id=mySlider min="0" max="973" value="300">
                 <script src="./scripts/worldmap.js"></script>
                 <script src="./scripts/bubbleMap.js"></script>
 
-                <div class="row">
-                    <div id="slider-sec1" class="col-xs-6 col-sm-9">
-                        <button id="play-button-sec1" class="btn btn-primary">Play</button>
-                        <button id="reset-button-sec1" class="btn btn-default">Reset</button>
-                        <div id="slider-wrapper-sec1">
-                            <div id="date-slider-sec1"></div>
-                        </div>
-                    </div>
-                </div>
+
+
+
 
 
               </div>

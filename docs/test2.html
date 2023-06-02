@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v6.js"></script>
+
+<!-- Create the radio button -->
+<!-- Create the radio button -->
+<div id="colorButton">
+  <input type="radio" name="colorButton" value="red" checked> Red<br>
+  <input type="radio" name="colorButton" value="blue"> Blue<br>
+  <input type="radio" name="colorButton" value="green"> Green<br>
+</div>
+
+<!-- Create a svg area-->
+<svg id="dataviz_delay" width="400px" height="200px"></svg>
+<script>
+
+  // Position of the circles on the X axis
+  var position = [50, 150, 250, 350]
+
+  // Add circles at the top
+  var theCircles = d3.select("#dataviz_delay")
+    .selectAll("mycircles")
+    .data(position)
+    .enter()
+    .append("circle")
+      .attr("cx", function(d){return d} )
+      .attr("cy", 100)
+      .attr("r", 10)
+
+  // Function that change a color
+  function changeColor() {
+    var radioValue = $("input[name='colorButton']:active");
+    console.log(radioValue)
+    theCircles
+      .transition()
+      .style("fill", radioValue)
+  }
+
+  // Event listener to the radio button
+  d3.select("#colorButton").on("change", changeColor() )
+
+  </script>
