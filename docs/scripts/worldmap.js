@@ -13,10 +13,11 @@ L.tileLayer(
 // Add a svg layer to the map
 L.svg().addTo(map);
 
-function update() {
+
+function update_map() {
   d3.selectAll("circle")
     .attr("cx", function(d){ return map.latLngToLayerPoint([d.lat, d.long]).x })
     .attr("cy", function(d){ return map.latLngToLayerPoint([d.lat, d.long]).y })
 }
 
-map.on("moveend", update)
+map.on("moveend", update_map);

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/animate.min.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+
+<!-- Load d3.js and the geo projection plugin -->
+<section id="MapView">
+    <div class="container">
+
+        <div class="section-header">
+            <h2 class="section-title wow fadeInDown">Map View</h2>
+            <p class="wow fadeInDown">Let's take a look at the map to see how the mobility of people has changed
+                <br /> in
+                various regions of the world as the epidemic has progressed.
+            </p>
+
+            <div class="container">
+
+
+
+
+              <div class="row">
+
+                <script src="https://d3js.org/d3.v6.js"></script>
+
+                <!-- Load Leaflet -->
+                <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+                <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+                <!-- Load data -->
+                <script src="./scripts/mobility_country_place_date_data.js"></script>
+                <script src="./scripts/case_country_data.js"></script>
+
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+                <script src='https://unpkg.com/v-selectpage@2.1.4/dist/v-selectpage.js'></script>
+                <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+                <script src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js'></script>
+
+
+
+                <!-- Create an element where the map will take place -->
+                <div id="mapid"></div>
+
+                <style>
+                #mapid { height: 600px; }
+                </style>
+
+                <script src="./scripts/worldmap.js"></script>
+                <script src="./scripts/bubbleMap.js"></script>
+
+                <div class="row">
+                    <div id="slider-sec1" class="col-xs-6 col-sm-9">
+                        <button id="play-button-sec1" class="btn btn-primary">Play</button>
+                        <button id="reset-button-sec1" class="btn btn-default">Reset</button>
+                        <div id="slider-wrapper-sec1">
+                            <div id="date-slider-sec1"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+              </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!--  -->
+            <!--  -->
+            <!-- Map View Chart Here -->
+            <!--  -->
+            <!--  -->
+
+        </div>
+    </div>
+</section>
