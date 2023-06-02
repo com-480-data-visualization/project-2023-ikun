@@ -1,3 +1,6 @@
+// Implementation of radar chart using d3.js is mostly based on the code from:
+// https://www.visualcinnamon.com/2015/10/different-look-d3-radar-chart/
+
 
 function RadarChart(id, data, selectedCountry, date, options) {
 	var cfg = {
@@ -96,8 +99,6 @@ function RadarChart(id, data, selectedCountry, date, options) {
 			.style('text-transform', 'capitalize')
 			.text(country)
 	})
-
-
 
 	/////////////////////////////////////////////////////////
 	////////// Glow filter for some extra pizzazz ///////////
@@ -281,7 +282,6 @@ function RadarChart(id, data, selectedCountry, date, options) {
 	/////////////////// Helper Function /////////////////////
 	/////////////////////////////////////////////////////////
 
-	//Taken from http://bl.ocks.org/mbostock/7555321
 	//Wraps SVG text	
 	function wrap(text, width) {
 		text.each(function () {

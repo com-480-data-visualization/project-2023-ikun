@@ -109,7 +109,7 @@ function update() {
     RadarChart(".radarChart", dataToDraw, selectedCountry, date, radarChartOptions);
 }
 
-
+// Selection menu is implemented based on https://github.com/TerryZ/v-selectpage
 
 Vue.use(vSelectPage.default, {
     language: 'en'
