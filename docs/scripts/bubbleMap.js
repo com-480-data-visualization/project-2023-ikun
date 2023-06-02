@@ -24,9 +24,9 @@ function BubbleMap(id, data, category, date){
 */
 
 
-var dataToDraw = [];
+var dataToDrawMap = [];
 let p = "grocery_pharmacy";
-const categories = [
+const categoriesMap = [
   {name: "grocery_pharmacy", v: 0},
   {name: "park", v: 1},
   {name: "residential", v: 2},
@@ -36,17 +36,17 @@ const categories = [
 ];
 
 const color_list = ["blue", "red", "green", "yellow", "purple", "brown"]
-let places = ["grocery_pharmacy", "park", "residential", "retail_recreation", "transit_station", "workplace"];
+let placesMap = ["grocery_pharmacy", "park", "residential", "retail_recreation", "transit_station", "workplace"];
 
-const dates = Object.keys(data["France"][p]);
-dates.sort();
-const countries = Object.keys(case_data);
-countries.sort();
+const datesMap = Object.keys(data["France"][p]);
+datesMap.sort();
+const countriesMap = Object.keys(case_data);
+countriesMap.sort();
 
 // construct selection button
 d3.select("#selectButton")
     .selectAll('myOptions')
-    .data(categories)
+    .data(categoriesMap)
     .enter()
     .append('option')
     .text(function (d) { return d.name; }) // text showed in the menu
@@ -55,23 +55,23 @@ d3.select("#selectButton")
 
 
 
-var date = dates[300];
+var dateMap = datesMap[300];
 
 
 
 
-for (let country of countries){
-  if (case_data[country][date][1] == 0){
+for (let country of countriesMap){
+  if (case_data[country][dateMap][1] == 0){
     continue;
   }
 
-  dataToDraw.push(
+  dataToDrawMap.push(
     {
       country: country,
-      cases: case_data[country][date][0],
-      lat: case_data[country][date][2],
-      long: case_data[country][date][1],
-      value: data[country][p][date] + 1
+      cases: case_data[country][dateMap][0],
+      lat: case_data[country][dateMap][2],
+      long: case_data[country][dateMap][1],
+      value: data[country][p][dateMap] + 1
     }
   )
 
@@ -126,26 +126,26 @@ function BubbleMap(data, date, p){
 
 
 function update(index, p) {
-  date = dates[index]
-  dataToDraw = [];
+  dateMap = datesMap[index]
+  dataToDrawMap = [];
 
-  for (let country of countries){
-    if (case_data[country][date][1] == 0){
+  for (let country of countriesMap){
+    if (case_data[country][dateMap][1] == 0){
       continue;
     }
 
-    dataToDraw.push(
+    dataToDrawMap.push(
       {
         country: country,
-        cases: case_data[country][date][0],
-        lat: case_data[country][date][2],
-        long: case_data[country][date][1],
-        value: data[country][places[p]][date] + 1
+        cases: case_data[country][dateMap][0],
+        lat: case_data[country][dateMap][2],
+        long: case_data[country][dateMap][1],
+        value: data[country][placesMap[p]][dateMap] + 1
       }
     )
   }
 
-  BubbleMap(dataToDraw, date, p)
+  BubbleMap(dataToDrawMap, dateMap, p)
 }
 
 
