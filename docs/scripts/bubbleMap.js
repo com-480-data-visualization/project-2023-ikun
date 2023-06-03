@@ -147,7 +147,7 @@ function updateMap(index, pIn) {
 }
 
 
-let date_index = 300;
+let date_index = 200;
 let place_index = 0;
 updateMap(date_index, place_index)
 
