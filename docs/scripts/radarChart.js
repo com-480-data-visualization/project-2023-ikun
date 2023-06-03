@@ -41,9 +41,7 @@ function RadarChart(id, data, selectedCountry, date, options) {
 		.range([0, radius])
 		.domain([0, maxValue]);
 
-	/////////////////////////////////////////////////////////
-	//////////// Create the container SVG and g /////////////
-	/////////////////////////////////////////////////////////
+	// Create the container SVG and g
 
 	//Remove whatever chart with the same id/class was present before
 	d3v3.select(id).select("svg").remove();
@@ -57,9 +55,7 @@ function RadarChart(id, data, selectedCountry, date, options) {
 	var g = svg.append("g")
 		.attr("transform", "translate(" + (cfg.w / 2 + cfg.margin.left) + "," + (cfg.h / 2 + cfg.margin.top) + ")");
 
-	/////////////////////////////////////////////////////////
-	/////////////////// Label and Legend ////////////////////
-	/////////////////////////////////////////////////////////
+	// Label and Legend
 
 	const yearLabel = svg
 		.append('text')
@@ -100,9 +96,7 @@ function RadarChart(id, data, selectedCountry, date, options) {
 			.text(country)
 	})
 
-	/////////////////////////////////////////////////////////
-	////////// Glow filter for some extra pizzazz ///////////
-	/////////////////////////////////////////////////////////
+	//Glow filter for some extra pizzazz 
 
 	//Filter for the outside glow
 	var filter = g.append('defs').append('filter').attr('id', 'glow'),
@@ -111,10 +105,7 @@ function RadarChart(id, data, selectedCountry, date, options) {
 		feMergeNode_1 = feMerge.append('feMergeNode').attr('in', 'coloredBlur'),
 		feMergeNode_2 = feMerge.append('feMergeNode').attr('in', 'SourceGraphic');
 
-	/////////////////////////////////////////////////////////
-	/////////////// Draw the Circular grid //////////////////
-	/////////////////////////////////////////////////////////
-
+	//Draw the Circular grid 
 	//Wrapper for the grid & axes
 	var axisGrid = g.append("g").attr("class", "axisWrapper");
 
@@ -142,9 +133,7 @@ function RadarChart(id, data, selectedCountry, date, options) {
 		.attr("fill", "#737373")
 		.text(function (d, i) { return Format(maxValue * d / cfg.levels); });
 
-	/////////////////////////////////////////////////////////
-	//////////////////// Draw the axes //////////////////////
-	/////////////////////////////////////////////////////////
+	// Draw the axes
 
 	//Create the straight lines radiating outward from the center
 	var axis = axisGrid.selectAll(".axis")
@@ -173,9 +162,7 @@ function RadarChart(id, data, selectedCountry, date, options) {
 		.text(function (d) { return d })
 		.call(wrap, cfg.wrapWidth);
 
-	/////////////////////////////////////////////////////////
-	///////////// Draw the radar chart blobs ////////////////
-	/////////////////////////////////////////////////////////
+	// Draw the radar chart blobs
 
 	//The radial line function
 	var radarLine = d3v3.svg.line.radial()
@@ -237,9 +224,7 @@ function RadarChart(id, data, selectedCountry, date, options) {
 		.style("fill", function (d, i, j) { return cfg.color(j); })
 		.style("fill-opacity", 0.8);
 
-	/////////////////////////////////////////////////////////
-	//////// Append invisible circles for tooltip ///////////
-	/////////////////////////////////////////////////////////
+	// Append invisible circles for tooltip
 
 	//Wrapper for the invisible circles on top
 	var blobCircleWrapper = g.selectAll(".radarCircleWrapper")
@@ -278,9 +263,7 @@ function RadarChart(id, data, selectedCountry, date, options) {
 		.attr("class", "tooltip")
 		.style("opacity", 0);
 
-	/////////////////////////////////////////////////////////
-	/////////////////// Helper Function /////////////////////
-	/////////////////////////////////////////////////////////
+	// Helper
 
 	//Wraps SVG text	
 	function wrap(text, width) {

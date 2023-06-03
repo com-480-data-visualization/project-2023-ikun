@@ -15,7 +15,7 @@ L.svg().addTo(map);
 
 
 function update_map() {
-  d3.selectAll("circle")
+  d3.select("#mapid").selectAll("circle")
     .attr("cx", function(d){ return map.latLngToLayerPoint([d.lat, d.long]).x })
     .attr("cy", function(d){ return map.latLngToLayerPoint([d.lat, d.long]).y })
 }
