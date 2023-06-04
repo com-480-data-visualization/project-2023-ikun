@@ -657,7 +657,7 @@ color:#fff;
   background: #07080A;
   background: url('../images/img3.jpg');    
   background-size: cover;  
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.1);
   background-blend-mode: darken;
 };
 
@@ -665,7 +665,7 @@ color:#fff;
 color:#fff;
 }
 #BarView p{
-color:#fff;
+color:#000;
 }
 #BarView .listarrow li{
 color:#fff;

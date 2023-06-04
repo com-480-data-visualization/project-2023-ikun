@@ -124,6 +124,17 @@ https://com-480-data-visualization.github.io/project-2023-ikun/
 
 **80% of the final grade**
 
+Link to website:
+
+https://com-480-data-visualization.github.io/project-2023-ikun/
+
+Link to the process book:
+
+
+Link to the screencast:
+
+
+
 
 ## Late policy
 
