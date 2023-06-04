@@ -129,10 +129,10 @@ Link to website:
 https://com-480-data-visualization.github.io/project-2023-ikun/
 
 Link to the process book:
-
+https://github.com/com-480-data-visualization/project-2023-ikun/blob/master/IKUN%20-%20Process%20Book.pdf
 
 Link to the screencast:
-
+https://drive.google.com/file/d/1ShE53Gbc7aEc9fYsU9ESKKoASGdi2MQ5/view?usp=share_link
 
 
 
