@@ -77,6 +77,19 @@
                     in response to policies <br /> aimed at combating COVID-19. The reports charted movement trends over
                     time
                     by geography, across six different categories of places.</p>
+
+                <h2 class="section-title wow fadeInDown">How is the mobility data presented?</h2>
+
+
+                <p class="wow fadeInDown">Mobility of each day is compared to a <b>baseline</b> and reported as the <b>relative percentage</b>.
+                    <br/>
+                    <br/> The <b>baseline</b> is the median value, for the corresponding day of the week, <br/>during the 5-week period Jan 3–Feb 6, 2020.
+                    <br/>
+                    <br/> Mobility = 100% &#160 => &#160 Same as the baseline. &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160 &#160
+                    <br/> Mobility < 100% &#160 => &#160 Less mobility than the baseline.
+                    <br/> Mobility > 100% &#160 => &#160 More mobility than the baseline.
+
+                </p>
             </div>
 
             <div class="row">
@@ -292,17 +305,55 @@
         <div class="container">
 
             <div class="section-header">
-                <h2 class="section-title wow fadeInDown">Racing Bar View</h2>
-                <p class="wow fadeInDown">To do.</p>
+                <h2 class="section-title wow fadeInDown">Racing Bar Chart</h2>
+                <p class="wow fadeInDown">Want to select a certion place and have a look on the activity ranking of some countries? we can use Bar View.
+                </p>
+                <p class="wow fadeInDown">Select the certain place you like and drag the timeline <br />to obverse how the activity ranking of different countries changes on any day between 2020-02-15 and 2022-10-15 </p>
             </div>
 
-            <div class="row">
+            
+            <script src="https://d3js.org/d3.v6.min.js"></script>
+            <script src="https://unpkg.com/d3-simple-slider"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.9.0/vis.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.9.0/vis.min.css">
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/highcharts-more.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/v-selectpage@2.1.0/dist/v-selectpage.js"></script>
 
-                <!--  -->
-                <!--  -->
-                <!-- Bar View Chart Here -->
-                <!--  -->
-                <!--  -->
+
+            <div class="row">
+                <div class="max-width-4 mx-auto">
+                    <div id="app">
+                      <v-selectpage
+                        v-model="selectedItems"
+                        :data="entries"
+                        :columns="columns"
+                        @values="handleSelectionChange"
+                      ></v-selectpage>
+                    </div>
+
+                    <!-- Racing Chart, using d3.js -->
+                    <div class="racing-chart-div"></div>
+                    <div id="time-bar"></div>
+                    <button id="js-toggle" class="mt2 not-rounded button-lyrics" type="button">Click to Start or Pause
+                        </button>
+                </div>
+
+                <script src="./js/slider1.js"></script>
+                <script src="./js/Grocery_sec3.js"></script>
+                <script src="./js/Parks_sec3.js"></script>
+                <script src="./js/Residential_sec3.js"></script>
+                <script src="./js/Retail_sec3.js"></script>
+                <script src="./js/Workplaces_sec3.js"></script>
+                <script src="./js/racing_bar_Parks.js"></script>
+                <script src="./js/Transit_sec3.js"></script>
+                <script>
+                  draw_new_script();
+                  set_global_transit();
+                </script>
+
+
 
             </div>
         </div>
